@@ -43,17 +43,17 @@ void loop() {
   //  print: analog value | pressure (unit) \t
   // calculate the amount of time that has passed using the timePassed() function
   // ^ print all on the same line
-  int pressure = 0
+  int pressure = 0;
 
-  for (int i = 0; i = sizeof(pinPS)/sizeof(int); i++) {
-    pressure = analogRead(pinPS[i]);  // record current analog read
+  for (int j = 0; j = sizeof(pinsPS)/sizeof(int); j++) {
+    pressure = analogRead(pinsPS[j]);  // record current analog read
     Serial.print(pressure);   // print current analog read
     Serial.print(pressure * calibration); // print current pressure
     Serial.print("\t");
   }
 
-  Serial.println(timePassed);
-  delay(wait)
+  Serial.println(timePassed());
+  delay(wait);
 }
 
 // this function calculates the amount of time that has passed since start_time
