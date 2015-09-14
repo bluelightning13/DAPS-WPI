@@ -10,15 +10,29 @@
 */
 
 // Define pins here
+#define PS1 0
+#define PS2 1
+#define PS3 2
+#define PS4 3
 
 // Define calibration value here
+#define calibration 1
 
 // Define global variable start_time
+unsigned short start_time;
 
 void setup() {
   // set pinModes
+  pinMode(PS1, INPUT);
+  pinMode(PS2, INPUT);
+  pinMode(PS3, INPUT);
+  pinMode(PS4, INPUT);
+
   // start Serial
+  Serial.begin(115200);
+
   // initialize start_time
+  start_time = millis();
 }
 
 void loop() {
