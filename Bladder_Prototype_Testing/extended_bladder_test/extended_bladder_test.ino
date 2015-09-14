@@ -24,10 +24,9 @@ unsigned short start_time;
 
 void setup() {
   // set pinModes
-  pinMode(PS1, INPUT);
-  pinMode(PS2, INPUT);
-  pinMode(PS3, INPUT);
-  pinMode(PS4, INPUT);
+  for (int i = 0; i < sizeof(pinsPS)/sizeof(int); i++) {
+    pinMode(pinsPS[i], INPUT);
+  }
 
   // start Serial
   Serial.begin(115200);
