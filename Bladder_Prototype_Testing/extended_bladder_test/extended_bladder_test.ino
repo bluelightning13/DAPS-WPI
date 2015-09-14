@@ -9,6 +9,8 @@
 	Monitoring the bladders with the Arduino makes this task more convenient and accurate. 
 */
 
+#include "math.h"
+
 // Define pins here
 #define PS1 0
 #define PS2 1
@@ -18,6 +20,9 @@ int pinsPS[] = {PS1, PS2, PS3, PS4};
 
 // Define calibration value here
 #define calibration 1
+
+// Define milliseconds to hours value
+double hoursInMillis = 2.77778 * pow(10, -7);
 
 // Define global variable start_time
 unsigned short start_time;
@@ -66,5 +71,6 @@ float timePassed() {
   // calculate the time that has passed in milliseconds
   // multiply that number by 2.77778e-7, the number of hours in 1 millisecond
   // return the calculated number of hours
-
+  long passed = millis() - start_time;
+  return passed * hoursInMillis;
 }
