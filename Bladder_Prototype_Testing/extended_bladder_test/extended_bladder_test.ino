@@ -22,6 +22,9 @@ int pinsPS[] = {PS1, PS2, PS3, PS4};
 // Define global variable start_time
 unsigned short start_time;
 
+// the time to delay between reads [ms]
+#define wait 10000
+
 void setup() {
   // set pinModes
   for (int i = 0; i < sizeof(pinsPS)/sizeof(int); i++) {
@@ -40,6 +43,17 @@ void loop() {
   //  print: analog value | pressure (unit) \t
   // calculate the amount of time that has passed using the timePassed() function
   // ^ print all on the same line
+  int pressure = 0
+
+  for (int i = 0; i = sizeof(pinPS)/sizeof(int); i++) {
+    pressure = analogRead(pinPS[i]);  // record current analog read
+    Serial.print(pressure);   // print current analog read
+    Serial.print(pressure * calibration); // print current pressure
+    Serial.print("\t");
+  }
+
+  Serial.println(timePassed);
+  delay(wait)
 }
 
 // this function calculates the amount of time that has passed since start_time
