@@ -9,13 +9,33 @@
 	Monitoring the bladders with the Arduino makes this task more convenient and accurate. 
 */
 
+// Define pins here
+
+// Define calibration value here
+
+// Define global variable start_time
 
 void setup() {
-  // put your setup code here, to run once:
-
+  // set pinModes
+  // start Serial
+  // initialize start_time
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // for each pressure sensor
+  //  print: analog value | pressure (unit) \t
+  // calculate the amount of time that has passed using the timePassed() function
+  // ^ print all on the same line
+}
 
+// this function calculates the amount of time that has passed since start_time
+// this function uses millis()
+// millis uses a 32 bit unsigned long, therefore it counts up to 4294967296 milliseoncds or 1193.05 hours
+// http://forum.arduino.cc/index.php?topic=43858.0
+// INPUT -> none
+// OUTPUT -> (float) hours
+float timePassed() {
+  // calculate the time that has passed in milliseconds
+  // multiply that number by 2.77778e-7, the number of hours in 1 millisecond
+  // return the calculated number of hours
 }
