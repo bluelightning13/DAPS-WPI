@@ -14,6 +14,7 @@
 #define PS2 1
 #define PS3 2
 #define PS4 3
+int pinsPS[] = {PS1, PS2, PS3, PS4};
 
 // Define calibration value here
 #define calibration 1
@@ -52,4 +53,5 @@ float timePassed() {
   // calculate the time that has passed in milliseconds
   // multiply that number by 2.77778e-7, the number of hours in 1 millisecond
   // return the calculated number of hours
+
 }
