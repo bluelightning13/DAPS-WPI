@@ -1,4 +1,4 @@
-# SmartSocket15-16
+# RoboKnee
 WPI MQP 2015-16  Smart Socket (Robotic Knee)
 
 Authors:
